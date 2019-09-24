@@ -7,6 +7,7 @@ import {
 } from "sequelize";
 import {LogUser} from "./logUser";
 import sequelize from "./index";
+import * as bcrypt from "bcryptjs";
 
 class User extends Model {
     public id!: number;
@@ -26,6 +27,10 @@ class User extends Model {
     public static associations: {
         projects: Association<User, LogUser>;
     };
+
+    public async checkPassword (password: string) : Promise<boolean> {
+        return await bcrypt.compare(password, this.password);
+    }
 }
 
 User.init({
