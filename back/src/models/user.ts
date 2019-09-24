@@ -3,11 +3,12 @@ import {
     Association,
     HasManyAddAssociationMixin,
     HasManyGetAssociationsMixin,
-    HasManyCreateAssociationMixin
+    HasManyCreateAssociationMixin, DataTypes
 } from "sequelize";
 import {LogUser} from "./logUser";
+import sequelize from "./index";
 
-export class User extends Model {
+class User extends Model {
     public id!: number;
     public name!: string;
     public email!: string;
@@ -27,9 +28,27 @@ export class User extends Model {
     };
 }
 
-
-User.hasMany(LogUser, {
-    sourceKey: 'id',
-    foreignKey: 'user_id',
-    as: 'logs_uesr'
+User.init({
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+    name: {
+        type: new DataTypes.STRING(150),
+        allowNull: false,
+    },
+    email: {
+        type: new DataTypes.STRING(150),
+        allowNull: true
+    },
+    password: {
+        type: new DataTypes.STRING(150),
+        allowNull: true
+    }
+}, {
+    tableName: 'user',
+    sequelize: sequelize
 });
+
+export default User;
