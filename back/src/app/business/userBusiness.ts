@@ -21,9 +21,9 @@ export class UserBusiness {
         );
     }
 
-    public async findByEmailAndPassword (userAuth: AuthDTO) : Promise<UserViewModel> {
+    public async findByEmailAndPassword(userAuth: AuthDTO): Promise<UserViewModel> {
         let {email, password} = userAuth;
-        let user = await User.findOne({ where: { email } });
+        let user = await User.findOne({where: {email}});
 
         if (!user) throw new Error("Usuário não encontrado!");
         if (!await user.checkPassword(password)) throw new Error("Senha inválida!");

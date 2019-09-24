@@ -28,7 +28,7 @@ class User extends Model {
         projects: Association<User, LogUser>;
     };
 
-    public async checkPassword (password: string) : Promise<boolean> {
+    public async checkPassword(password: string): Promise<boolean> {
         return await bcrypt.compare(password, this.password);
     }
 }

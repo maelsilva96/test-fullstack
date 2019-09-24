@@ -1,7 +1,7 @@
 import {Association, HasOneGetAssociationMixin, Model} from "sequelize";
 import User from "./user";
 
-export class LogUser  extends Model {
+export class LogUser extends Model {
     public id!: number;
     public user_id!: number;
     public operation!: string;

@@ -1,0 +1,103 @@
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"ismael@a.com","password":"teste"}
+
+<> 2019-09-24T081349.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"ismael@a.com","password":"teste"}
+
+<> 2019-09-24T081328.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"ismael@a.com"}
+
+<> 2019-09-24T081314.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"ismael@a.com"}
+
+<> 2019-09-24T081313.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"ismael@a.com"}
+
+<> 2019-09-24T081254.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+
+{"email":"ismael@a.com"}
+
+<> 2019-09-24T081108.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+
+{"email":"ismael@a.com"}
+
+<> 2019-09-24T081017.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+
+{email:"ismael@a.com"}
+
+<> 2019-09-24T080958.401.json
+
+###
+
+POST http://localhost:3333/auth
+Accept: */*
+Cache-Control: no-cache
+
+{email:"ismael@a.com",password:"teste"}
+
+<> 2019-09-24T080921.401.json
+
+###
+
+POST http://localhost:3333/auth?email=ismael&password=teste
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-09-24T080759.401.json
+
+###
+

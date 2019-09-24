@@ -6,7 +6,7 @@ export class UserDTO {
     email: string;
     password: string;
 
-    public async passwordEncrypted (): Promise<string> {
+    public async passwordEncrypted(): Promise<string> {
         let salt = await bcrypt.genSalt(8);
         return await bcrypt.hash(this.password, salt);
     }

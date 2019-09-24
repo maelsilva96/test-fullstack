@@ -6,8 +6,11 @@ import {AuthDTO} from "../models/dto/authDTO";
 
 class AuthController {
     private static userBusiness: UserBusiness;
+
     public constructor(userBusiness: UserBusiness) {
-        AuthController.userBusiness = userBusiness;
+        if (AuthController.userBusiness == null) {
+            AuthController.userBusiness = userBusiness;
+        }
     }
 
     public async login(req: Request, res: Response): Promise<Response> {

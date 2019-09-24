@@ -1,11 +1,12 @@
-import {Request, Response} from "express";
 import {UserBusiness} from "../business/userBusiness";
 
 class UserController {
-    public constructor (private userBusiness: UserBusiness) {}
+    private static userBusiness: UserBusiness;
 
-    public async create (req: Request, res: Response) : Promise<Response> {
-        return res.json();
+    public constructor(userBusiness: UserBusiness) {
+        if (UserController.userBusiness == null) {
+            UserController.userBusiness = userBusiness;
+        }
     }
 }
 
