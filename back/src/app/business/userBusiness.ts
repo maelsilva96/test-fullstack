@@ -15,10 +15,7 @@ export class UserBusiness {
             password: await userDTO.passwordEncrypted(),
             email: userDTO.email
         });
-        return new UserViewModel(
-            user.id, user.name, user.email,
-            user.createdAt.toISOString(), user.updatedAt.toISOString()
-        );
+        return user.asViewModel();
     }
 
     public async findByEmailAndPassword(userAuth: AuthDTO): Promise<UserViewModel> {
@@ -28,9 +25,6 @@ export class UserBusiness {
         if (!user) throw new Error("Usuário não encontrado!");
         if (!await user.checkPassword(password)) throw new Error("Senha inválida!");
 
-        return new UserViewModel(
-            user.id, user.name, user.email,
-            user.createdAt.toISOString(), user.updatedAt.toISOString()
-        );
+        return user.asViewModel();
     }
 }

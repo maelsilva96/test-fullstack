@@ -13,9 +13,6 @@ export class ProductDTO {
         if (!productData.image) throw new ArgumentException("Atributo imagem não encontrado!");
         if (!productData.evaluation) throw new ArgumentException("Atributo avaliação não encontrado!");
         let auth = new ProductDTO();
-        if (productData.id) {
-            auth.id = productData.id;
-        }
         auth.name = productData.name;
         auth.description = productData.description;
         auth.image = productData.image;

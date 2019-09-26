@@ -44,8 +44,8 @@ describe("Auth", function () {
                 email: user.email,
                 password: user.password
             });
-        expect(response.status).toBe(200);
-        expect(response.body).toHaveProperty("token");
+        expect(response.status).toBe(201);
+        expect(response.headers).toHaveProperty("token");
     });
 
     it("should not authenticate with email invalid", async function () {

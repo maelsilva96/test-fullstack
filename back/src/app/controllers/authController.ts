@@ -22,7 +22,7 @@ class AuthController {
                 token: await user.generateToken()
             });
         } catch (e) {
-            return res.status(401).json({message: e.message});
+            return res.status(400).json({message: e.message});
         }
     }
 
@@ -30,12 +30,10 @@ class AuthController {
         let userData = req.body;
         try {
             let user = await AuthController.userBusiness.create(UserDTO.cast(userData));
-            return res.status(200).json({
-                user: user,
-                token: await user.generateToken()
-            });
+            res.setHeader("token", await user.generateToken());
+            return res.status(201).json();
         } catch (e) {
-            return res.status(401).json({message: e.message});
+            return res.status(400).json({message: e.message});
         }
     }
 }

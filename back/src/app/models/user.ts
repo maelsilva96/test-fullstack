@@ -8,6 +8,7 @@ import {
 import {LogUser} from "./logUser";
 import sequelize from "./index";
 import * as bcrypt from "bcryptjs";
+import {UserViewModel} from "./viewModel/userViewModel";
 
 class User extends Model {
     public id!: number;
@@ -30,6 +31,13 @@ class User extends Model {
 
     public async checkPassword(password: string): Promise<boolean> {
         return await bcrypt.compare(password, this.password);
+    }
+
+    public asViewModel(): UserViewModel {
+        return new UserViewModel(
+            this.id, this.name, this.email,
+            this.createdAt.toISOString(), this.updatedAt.toISOString()
+        );
     }
 }
 
