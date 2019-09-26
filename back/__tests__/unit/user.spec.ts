@@ -43,6 +43,16 @@ describe("Create User", function () {
         }
     });
 
+    it("should not create an user with email invalid by Business", async function () {
+        let userDTO = UserFactory.init().setEmail("aaa.com").build();
+        expect.assertions(1);
+        try {
+            await (new UserBusiness()).create(userDTO);
+        } catch (e) {
+            expect(e.message).toBe("E-mail inválido!");
+        }
+    });
+
     it("should not create an user with null password", async function () {
         let userDTO = UserFactory.init().setPassword(null).build();
         expect.assertions(1);

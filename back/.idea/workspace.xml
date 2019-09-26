@@ -2,22 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f33924d1-7c15-4913-b6da-248d80181df7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/__tests__/unit/product.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/middleware/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/models/viewModel/ProductViewModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/factories/logUserFactory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/integration/logUser.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/unit/logUser.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/business/logUserBusiness.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/controllers/logUserController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/models/dto/logUserDTO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/models/viewModel/logUserViewModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.testing" beforeDir="false" afterPath="$PROJECT_DIR$/.env.testing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/factories/productFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/factories/productFactory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/database.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/factories/userFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/factories/userFactory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__tests__/integration/auth.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/integration/auth.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__tests__/integration/product.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/integration/product.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/integration/user.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/integration/user.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/unit/user.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/unit/user.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/utils/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/utils/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/business/productBusiness.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/business/productBusiness.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/business/userBusiness.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/business/userBusiness.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controllers/authController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controllers/authController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controllers/productController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controllers/productController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/models/dto/productDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/dto/productDTO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/models/logUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/logUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/models/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/product.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/viewModel/ProductViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/viewModel/productViewModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/20190926013152-update-table-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/20190926013152-update-table-log.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,81 +42,100 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__tests__/integration/product.spec.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/models/user.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="220" column="44" selection-start-line="220" selection-start-column="44" selection-end-line="220" selection-end-column="44" />
+            <state relative-caret-position="930">
+              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#457#1347#0" />
-                <element signature="e#3143#5912#0" />
+                <element signature="e#0#166#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/business/productBusiness.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/models/logUser.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+            <state relative-caret-position="338">
+              <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes.ts">
+        <entry file="file://$PROJECT_DIR$/.env.testing">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/productController.ts">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/models/dto/productDTO.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+            <state relative-caret-position="150">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/models/logUser.ts">
+        <entry file="file://$PROJECT_DIR$/__tests__/utils/database.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+            <state relative-caret-position="30">
+              <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__tests__/unit/logUser.spec.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="71" selection-start-line="1" selection-start-column="71" selection-end-line="1" selection-end-column="71" />
               <folding>
-                <element signature="e#0#83#0" expanded="true" />
+                <element signature="e#0#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/models/user.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/business/logUserBusiness.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="64" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#166#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/migrations/20190926224011-insert-update-at-in-log-user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/migrations/20190926013152-update-table-log.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -139,19 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env.testing" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/__tests__/utils/database.ts" />
-        <option value="$PROJECT_DIR$/src/models/dto/userDTO.ts" />
-        <option value="$PROJECT_DIR$/src/exceptions/argumentException.ts" />
-        <option value="$PROJECT_DIR$/src/utils/validations.ts" />
-        <option value="$PROJECT_DIR$/__tests__/unit/user.test.ts" />
-        <option value="$PROJECT_DIR$/jest.tsc.config.js" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/src/models/index.ts" />
-        <option value="$PROJECT_DIR$/src/config/database.js" />
-        <option value="$PROJECT_DIR$/src/models/viewModel/userVieModel.ts" />
-        <option value="$PROJECT_DIR$/jest.config.js" />
         <option value="$PROJECT_DIR$/src/models/viewModel/userViewModel.ts" />
         <option value="$PROJECT_DIR$/src/models/user.ts" />
         <option value="$PROJECT_DIR$/src/repositories/implementations/userImpl.ts" />
@@ -159,14 +174,9 @@
         <option value="$PROJECT_DIR$/src/business/userBusiness.ts" />
         <option value="$PROJECT_DIR$/src/controllers/userController.ts" />
         <option value="$PROJECT_DIR$/src/app/controllers/AuthController.ts" />
-        <option value="$PROJECT_DIR$/__tests__/factories/userFactory.ts" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/__tests__/factories/auth.spec.ts" />
-        <option value="$PROJECT_DIR$/__tests__/unit/user.spec.ts" />
-        <option value="$PROJECT_DIR$/__tests__/integration/user.spec.ts" />
         <option value="$PROJECT_DIR$/src/app/models/dto/authDTO.ts" />
         <option value="$PROJECT_DIR$/src/app/models/viewModel/userViewModel.ts" />
-        <option value="$PROJECT_DIR$/src/app/models/dto/userDTO.ts" />
         <option value="$PROJECT_DIR$/src/app/models/index.ts" />
         <option value="$PROJECT_DIR$/src/app/controllers/userController.ts" />
         <option value="restClient/response6.txt" />
@@ -175,21 +185,39 @@
         <option value="$PROJECT_DIR$/src/database/migrations/20190923211551-create-product.js" />
         <option value="$PROJECT_DIR$/src/app/models/viewModel/ProductViewModel.ts" />
         <option value="$PROJECT_DIR$/src/app/models/product.ts" />
-        <option value="$PROJECT_DIR$/__tests__/integration/auth.spec.ts" />
-        <option value="$PROJECT_DIR$/src/app/models/user.ts" />
-        <option value="$PROJECT_DIR$/src/app/business/userBusiness.ts" />
         <option value="$PROJECT_DIR$/src/app/middleware/auth.ts" />
-        <option value="$PROJECT_DIR$/src/app/controllers/authController.ts" />
         <option value="$PROJECT_DIR$/__tests__/unit/product.spec.ts" />
         <option value="$PROJECT_DIR$/__tests__/factories/productFactory.ts" />
         <option value="$PROJECT_DIR$/src/app/models/dto/productDTO.ts" />
-        <option value="$PROJECT_DIR$/src/routes.ts" />
         <option value="$PROJECT_DIR$/src/app/controllers/productController.ts" />
-        <option value="$PROJECT_DIR$/src/app/business/productBusiness.ts" />
-        <option value="$PROJECT_DIR$/__tests__/integration/product.spec.ts" />
         <option value="$PROJECT_DIR$/src/database/migrations/20190923211538-create-log-user.js" />
-        <option value="$PROJECT_DIR$/src/database/migrations/20190926013152-update-table-log.js" />
+        <option value="$PROJECT_DIR$/src/app/models/dto/logUserDTO.ts" />
+        <option value="$PROJECT_DIR$/__tests__/factories/logUserFactory.ts" />
+        <option value="$PROJECT_DIR$/__tests__/unit/user.spec.ts" />
+        <option value="$PROJECT_DIR$/src/app/models/dto/userDTO.ts" />
+        <option value="$PROJECT_DIR$/__tests__/factories/userFactory.ts" />
+        <option value="$PROJECT_DIR$/__tests__/unit/logUser.spec.ts" />
+        <option value="$PROJECT_DIR$/src/app/models/viewModel/logUserViewMode.ts" />
+        <option value="$PROJECT_DIR$/src/app/business/productBusiness.ts" />
+        <option value="$PROJECT_DIR$/src/app/models/viewModel/logUserViewModel.ts" />
+        <option value="$PROJECT_DIR$/src/app/business/userBusiness.ts" />
+        <option value="$PROJECT_DIR$/src/app/controllers/authController.ts" />
+        <option value="$PROJECT_DIR$/__tests__/integration/auth.spec.ts" />
+        <option value="$PROJECT_DIR$/src/database/migrations/20190926222326-insert-update-at-in-log-user.js" />
+        <option value="$PROJECT_DIR$/src/routes.ts" />
+        <option value="$PROJECT_DIR$/src/app/controllers/logUserController.ts" />
+        <option value="$PROJECT_DIR$/src/app/business/logUserBusiness.ts" />
+        <option value="$PROJECT_DIR$/__tests__/integration/logUser.spec.ts" />
+        <option value="$PROJECT_DIR$/__tests__/integration/product.spec.ts" />
+        <option value="$PROJECT_DIR$/__tests__/integration/user.spec.ts" />
+        <option value="$PROJECT_DIR$/src/app/models/user.ts" />
         <option value="$PROJECT_DIR$/src/app/models/logUser.ts" />
+        <option value="$PROJECT_DIR$/src/database/migrations/20190926224011-insert-update-at-in-log-user.js" />
+        <option value="$PROJECT_DIR$/src/database/migrations/20190926013152-update-table-log.js" />
+        <option value="$PROJECT_DIR$/.env.testing" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/__tests__/utils/database.ts" />
       </list>
     </option>
   </component>
@@ -256,6 +284,20 @@
               <item name="back" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,12 +318,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -498,73 +534,71 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.Delete Product">
-    <configuration name="Delete Product" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.Auth.should authenticate with valid credentials">
+    <configuration name="Auth" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/__tests__/integration/product.spec.ts" />
+      <test-file value="$PROJECT_DIR$/__tests__/integration/auth.spec.ts" />
       <test-names>
-        <test-name value="Delete Product" />
+        <test-name value="Auth" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Find Product.should find product by Business" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Auth.should authenticate with valid credentials" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__tests__/integration/product.spec.ts" />
+      <test-file value="$PROJECT_DIR$/__tests__/integration/auth.spec.ts" />
       <test-names>
-        <test-name value="Find Product" />
-        <test-name value="should find product by Business" />
+        <test-name value="Auth" />
+        <test-name value="should authenticate with valid credentials" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Find Product.should find product by Controller" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Create Log User" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/__tests__/integration/logUser.spec.ts" />
+      <test-names>
+        <test-name value="Create Log User" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Create Log User.should list log users if logged with credentials valid by Business" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__tests__/integration/product.spec.ts" />
+      <test-file value="$PROJECT_DIR$/__tests__/integration/logUser.spec.ts" />
       <test-names>
-        <test-name value="Find Product" />
-        <test-name value="should find product by Controller" />
+        <test-name value="Create Log User" />
+        <test-name value="should list log users if logged with credentials valid by Business" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Find Product.should not find product if not exist by Business" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Create User" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__tests__/integration/product.spec.ts" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/__tests__/integration/user.spec.ts" />
       <test-names>
-        <test-name value="Find Product" />
-        <test-name value="should not find product if not exist by Business" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Find Product.should not find product if not existe by Controller" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/__tests__/integration/product.spec.ts" />
-      <test-names>
-        <test-name value="Find Product" />
-        <test-name value="should not find product if not existe by Controller" />
+        <test-name value="Create User" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -580,11 +614,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Delete Product" />
-        <item itemvalue="Jest.Find Product.should not find product if not existe by Controller" />
-        <item itemvalue="Jest.Find Product.should find product by Controller" />
-        <item itemvalue="Jest.Find Product.should not find product if not exist by Business" />
-        <item itemvalue="Jest.Find Product.should find product by Business" />
+        <item itemvalue="Jest.Auth.should authenticate with valid credentials" />
+        <item itemvalue="Jest.Create Log User" />
+        <item itemvalue="Jest.Auth" />
+        <item itemvalue="Jest.Create User" />
+        <item itemvalue="Jest.Create Log User.should list log users if logged with credentials valid by Business" />
       </list>
     </recent_temporary>
   </component>
@@ -601,44 +635,44 @@
       <workItem from="1568939451812" duration="6205000" />
       <workItem from="1568947461927" duration="5854000" />
       <workItem from="1569067627476" duration="5174000" />
-      <workItem from="1569235557806" duration="49778000" />
+      <workItem from="1569235557806" duration="61379000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Find_Product_should_not_find_product_if_not_existe_by_Controller - 2019.09.25 at 22h 11m 08s.xml">
-      <configuration name="Find Product.should not find product if not existe by Controller" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_Log_User_should_list_log_users_if_logged_with_credentials_valid_by_Business - 2019.09.26 at 20h 26m 38s.xml">
+      <configuration name="Create Log User.should list log users if logged with credentials valid by Business" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Find_Product_should_not_find_product_if_not_existe_by_Controller - 2019.09.25 at 22h 17m 09s.xml">
-      <configuration name="Find Product.should not find product if not existe by Controller" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_Log_User_should_list_log_users_if_logged_with_credentials_valid_by_Business - 2019.09.26 at 20h 28m 32s.xml">
+      <configuration name="Create Log User.should list log users if logged with credentials valid by Business" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Find_Product_should_not_find_product_if_not_existe_by_Controller - 2019.09.25 at 22h 17m 35s.xml">
-      <configuration name="Find Product.should not find product if not existe by Controller" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_Log_User_should_list_log_users_if_logged_with_credentials_valid_by_Business - 2019.09.26 at 20h 28m 45s.xml">
+      <configuration name="Create Log User.should list log users if logged with credentials valid by Business" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Find_Product_should_not_find_product_if_not_existe_by_Controller - 2019.09.25 at 22h 17m 58s.xml">
-      <configuration name="Find Product.should not find product if not existe by Controller" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_Log_User_should_list_log_users_if_logged_with_credentials_valid_by_Business - 2019.09.26 at 20h 30m 57s.xml">
+      <configuration name="Create Log User.should list log users if logged with credentials valid by Business" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Find_Product_should_not_find_product_if_not_existe_by_Controller - 2019.09.25 at 22h 18m 04s.xml">
-      <configuration name="Find Product.should not find product if not existe by Controller" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_Log_User_should_list_log_users_if_logged_with_credentials_valid_by_Business - 2019.09.26 at 20h 32m 11s.xml">
+      <configuration name="Create Log User.should list log users if logged with credentials valid by Business" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Find_Product_should_not_find_product_if_not_existe_by_Controller - 2019.09.25 at 22h 18m 41s.xml">
-      <configuration name="Find Product.should not find product if not existe by Controller" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_Log_User_should_list_log_users_if_logged_with_credentials_valid_by_Business - 2019.09.26 at 20h 33m 37s.xml">
+      <configuration name="Create Log User.should list log users if logged with credentials valid by Business" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Find_Product_should_not_find_product_if_not_existe_by_Controller - 2019.09.25 at 22h 18m 49s.xml">
-      <configuration name="Find Product.should not find product if not existe by Controller" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_User - 2019.09.26 at 20h 43m 38s.xml">
+      <configuration name="Create User" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Delete_Product - 2019.09.25 at 22h 22m 21s.xml">
-      <configuration name="Delete Product" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Auth - 2019.09.26 at 20h 43m 53s.xml">
+      <configuration name="Auth" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Delete_Product - 2019.09.25 at 22h 27m 00s.xml">
-      <configuration name="Delete Product" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Create_Log_User - 2019.09.26 at 20h 44m 27s.xml">
+      <configuration name="Create Log User" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Delete_Product - 2019.09.25 at 22h 27m 18s.xml">
-      <configuration name="Delete Product" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="Auth_should_authenticate_with_valid_credentials - 2019.09.26 at 20h 47m 54s.xml">
+      <configuration name="Auth.should authenticate with valid credentials" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67011000" />
+    <option name="totallyTimeSpent" value="78612000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,6 +692,7 @@
       <window_info id="npm" order="2" sideWeight="0.50089765" side_tool="true" weight="0.24947146" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="REST Client" weight="0.60361445" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" weight="0.32891566" />
@@ -718,108 +753,25 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/controllers/productController.ts</url>
+          <line>26</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/business/userBusiness.ts</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.env.testing">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/validations.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/utils/database.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jest.tsc.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/jest/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="859" column="8" selection-start-line="859" selection-start-column="8" selection-end-line="859" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/repositories/implementations/userImpl.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jest.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bluebird/js/release/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/integration/teste.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exceptions/argumentException.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -879,20 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/migrations/20190923211551-create-product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/sequelize/types/lib/model.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -921,60 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/business/userBusiness.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/integration/user.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/viewModel/ProductViewModel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="96" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/unit/user.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/dto/userDTO.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/factories/userFactory.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -982,49 +866,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/authController.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/models/dto/productDTO.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/integration/auth.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/middleware/auth.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/factories/productFactory.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="79" column="38" lean-forward="true" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/models/product.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="300">
           <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
@@ -1032,10 +883,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/dto/productDTO.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/models/dto/logUserDTO.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/dto/userDTO.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/viewModel/productViewModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="83" lean-forward="true" selection-start-line="2" selection-start-column="83" selection-end-line="2" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/factories/productFactory.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/viewModel/logUserViewModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/factories/logUserFactory.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/unit/user.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1051,76 +950,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.ts">
+    <entry file="file://$PROJECT_DIR$/__tests__/factories/userFactory.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/productController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="341">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
-            <element signature="e#0#60#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/business/productBusiness.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        <state relative-caret-position="353">
+          <caret line="57" column="44" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="44" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/migrations/20190926013152-update-table-log.js">
+    <entry file="file://$PROJECT_DIR$/src/database/migrations/20190926222326-insert-update-at-in-log-user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="45">
+          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/sqlite3/lib/sqlite3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/business/userBusiness.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/migrations/20190923211538-create-log-user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="240">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/migrations/20190923211516-create-user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/migrations/20190923211551-create-product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/middleware/auth.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/productController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/logUserController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/authController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/integration/product.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="220" column="44" selection-start-line="220" selection-start-column="44" selection-end-line="220" selection-end-column="44" />
+        <state relative-caret-position="300">
+          <caret line="208" column="39" selection-start-line="208" selection-start-column="39" selection-end-line="208" selection-end-column="39" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#457#1347#0" />
-            <element signature="e#3143#5912#0" />
+            <element signature="e#503#1432#0" />
+            <element signature="e#1475#3226#0" />
+            <element signature="e#3269#6100#0" />
+            <element signature="e#6142#8016#0" />
+            <element signature="e#8059#9150#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/integration/user.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/integration/logUser.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/integration/auth.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/unit/logUser.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="71" selection-start-line="1" selection-start-column="71" selection-end-line="1" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/business/logUserBusiness.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/models/logUser.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/models/user.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="64" selection-end-column="3" />
+        <state relative-caret-position="930">
+          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
           <folding>
             <element signature="e#0#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/logUser.ts">
+    <entry file="file://$PROJECT_DIR$/src/database/migrations/20190926013152-update-table-log.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#83#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="403">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/migrations/20190926224011-insert-update-at-in-log-user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.testing">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/utils/database.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
         </state>
       </provider>
     </entry>

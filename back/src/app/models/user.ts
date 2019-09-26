@@ -23,7 +23,7 @@ class User extends Model {
     public addLogUser!: HasManyAddAssociationMixin<LogUser, number>;
     public createLogUser!: HasManyCreateAssociationMixin<LogUser>;
 
-    public readonly logs_uesr?: Array<LogUser>;
+    public readonly logs_user?: LogUser[];
 
     public static associations: {
         projects: Association<User, LogUser>;

@@ -1,6 +1,7 @@
-import {Association, DataTypes, HasOneGetAssociationMixin, Model} from "sequelize";
+import {DataTypes, Model} from "sequelize";
 import sequelize from "./index";
 import User from "./user";
+import {LogUserViewModel} from "./viewModel/logUserViewModel";
 
 export class LogUser extends Model {
     public id!: number;
@@ -10,13 +11,22 @@ export class LogUser extends Model {
 
     public readonly createdAt!: Date;
 
-    public getUser!: HasOneGetAssociationMixin<User>;
-
     public readonly user: User;
 
-    public static associations: {
-        projects: Association<LogUser, User>;
-    };
+    private async getUser(): Promise<User> {
+        return await User.findOne({
+            where: {
+                id: this.user_id
+            }
+        })
+    }
+
+    public async asViewModel() {
+        return new LogUserViewModel(
+            this.id, this.operation, this.message,
+            (await this.getUser()).asViewModel(), this.createdAt.toISOString()
+        );
+    }
 }
 
 LogUser.init({
@@ -41,7 +51,5 @@ LogUser.init({
     tableName: 'log_user',
     sequelize: sequelize
 });
-
-LogUser.belongsTo(User, { targetKey: "id" });
 
 export default LogUser;

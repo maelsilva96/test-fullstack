@@ -9,7 +9,7 @@ module.exports = {
           'message',
           {
             type: Sequelize.STRING,
-            allowNull: false
+              allowNull: false
           },
           { transaction }
       );

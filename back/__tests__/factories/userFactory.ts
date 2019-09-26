@@ -4,6 +4,7 @@ import User from "../../src/app/models/user";
 const faker = require("faker");
 
 export class UserFactory {
+
     constructor(public email: string, public password: string, public name?: string) {
     }
 
@@ -24,6 +25,17 @@ export class UserFactory {
             email: fac.email
         });
         return fac;
+    }
+
+    public static async createNewInstanceAndReturnId () : Promise<number> {
+        let fac = UserFactory.init().build();
+        let password = await fac.passwordEncrypted();
+        let userSave = await User.create({
+            name: fac.name,
+            password: password,
+            email: fac.email
+        });
+        return userSave.id;
     }
 
     public setName(name?: string): UserFactory {

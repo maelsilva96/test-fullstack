@@ -7,9 +7,8 @@
     "build": "webpack",
     "start:dev": "NODE_ENV=development webpack",
     "run:dev": "NODE_ENV=development nodemon build/index.js",
-    "pretest": "NODE_ENV=test sequelize db:migrate",
-    "test": "NODE_ENV=test jest",
-    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
+    "migrateDbTest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest"
   },
   "dependencies": {
     "@types/jsonwebtoken": "^8.3.4",

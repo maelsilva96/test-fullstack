@@ -6,9 +6,13 @@ import {ProductFactory} from "../factories/productFactory";
 import app from "../../src/app";
 import {UserFactory} from "../factories/userFactory";
 import {UserBusiness} from "../../src/app/business/userBusiness";
+import User from "../../src/app/models/user";
+import LogUser from "../../src/app/models/logUser";
 
 describe("List Product", function () {
     beforeEach(async () => {
+        await Database.Truncate(LogUser);
+        await Database.Truncate(User);
         await Database.Truncate(Product);
     });
 
@@ -33,6 +37,8 @@ describe("List Product", function () {
 
 describe("Create Product", function () {
     beforeEach(async () => {
+        await Database.Truncate(LogUser);
+        await Database.Truncate(User);
         await Database.Truncate(Product);
     });
 
@@ -78,6 +84,8 @@ describe("Create Product", function () {
 
 describe("Update Product", function () {
     beforeEach(async () => {
+        await Database.Truncate(LogUser);
+        await Database.Truncate(User);
         await Database.Truncate(Product);
     });
 
@@ -149,6 +157,8 @@ describe("Update Product", function () {
 
 describe("Find Product", function () {
     beforeEach(async () => {
+        await Database.Truncate(LogUser);
+        await Database.Truncate(User);
         await Database.Truncate(Product);
     });
 
@@ -197,6 +207,12 @@ describe("Find Product", function () {
 });
 
 describe("Delete Product", function () {
+    beforeEach(async () => {
+        await Database.Truncate(LogUser);
+        await Database.Truncate(User);
+        await Database.Truncate(Product);
+    });
+
     it("should delete product by Business", async function () {
         let user = await UserFactory.init().build();
         let userSave = await (new UserBusiness()).create(user);

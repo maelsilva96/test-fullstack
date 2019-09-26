@@ -3,6 +3,7 @@ import authController from "./app/controllers/authController";
 import userController from "./app/controllers/userController";
 import productController from "./app/controllers/productController";
 import auth from "./app/middleware/auth";
+import logUserController from "./app/controllers/logUserController";
 
 
 const route = Router();
@@ -14,6 +15,8 @@ route.put("/createAndAuth", authController.createAndAuth);
 route.get("/product/list", productController.listAll);
 
 route.use(auth.validToken);
+
+route.get("/logUser/byUser", logUserController.getAllByUser);
 
 route.get("/product/:productId", productController.findById);
 route.post("/product", productController.create);

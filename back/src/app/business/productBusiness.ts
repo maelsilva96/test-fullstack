@@ -1,5 +1,5 @@
 import Product from "../models/product";
-import {ProductViewModel} from "../models/viewModel/ProductViewModel";
+import {ProductViewModel} from "../models/viewModel/productViewModel";
 import {ProductDTO} from "../models/dto/productDTO";
 import {ArgumentException} from "../../exceptions/argumentException";
 
