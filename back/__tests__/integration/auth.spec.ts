@@ -40,7 +40,7 @@ describe("Auth", function () {
         let user = UserFactory.init().build();
 
         let response = await request(app)
-            .put("/createAndAuth")
+            .post("/createAndAuth")
             .send({
                 name: user.name,
                 email: user.email,
