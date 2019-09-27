@@ -15,13 +15,11 @@ route.post("/createAndAuth", authController.createAndAuth);
 route.get("/product/list", productController.listAll);
 route.use("/files", express.static("tmp/uploads"));
 
-route.use(auth.validToken);
-
-route.get("/logUser/byUser", logUserController.getAllByUser);
-route.post("/saveImage", uploads.single("image"), imageController.saveFile);
-route.get("/product/:productId", productController.findById);
-route.post("/product", productController.create);
-route.put("/product/:productId", productController.update);
-route.delete("/product/:productId", productController.delete);
+route.get("/logUser/byUser", auth.validToken, logUserController.getAllByUser);
+route.post("/saveImage", auth.validToken, uploads.single("image"), imageController.saveFile);
+route.get("/product/:productId", auth.validToken, productController.findById);
+route.post("/product", auth.validToken, productController.create);
+route.put("/product/:productId", auth.validToken, productController.update);
+route.delete("/product/:productId", auth.validToken, productController.delete);
 
 export default route;

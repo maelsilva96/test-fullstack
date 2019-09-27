@@ -1,10 +1,10 @@
 import {Request, Response} from "express";
 
 class ImageController {
-    private static routeForAccess: string = "/file/";
+    private static routeForAccess: string = "/files/";
 
     public saveFile(req: Request, res: Response) {
-        let routeFile = `${ImageController.routeForAccess}${req.file.filename}`;
+        let routeFile = `${process.env.APP_ROUTE}${ImageController.routeForAccess}${req.file.filename}`;
         try {
             return res.status(201).header({
                 image: routeFile
