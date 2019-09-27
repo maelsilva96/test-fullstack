@@ -23,7 +23,7 @@ describe("Create Log User", function () {
         expect(logUserSave.message).toBe(logUserDTO.message);
     });
 
-    it("should list log users if logged with credentials valid by Business", async function () {
+    it("should list log users if logged with credentials valid by Controller", async function () {
         let user = await UserFactory.init().build();
         let userSave = await (new UserBusiness()).create(user);
         let userLog = await LogUser.create({
@@ -35,6 +35,7 @@ describe("Create Log User", function () {
         let response = await request(app)
             .get(`/logUser/byUser`)
             .set("Authorization", `Bearer ${userSave.generateToken()}`);
+
         expect(response.statusCode).toBe(200);
         expect(response.body).toHaveProperty("logsUser");
         expect(response.body.logsUser[0].operation).toBe(userLog.operation);

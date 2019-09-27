@@ -6,8 +6,8 @@ import {ArgumentException} from "../../exceptions/argumentException";
 export class ProductBusiness {
     public async findAll(): Promise<Array<ProductViewModel>> {
         let products = await Product.findAll({});
-        let productsViewModel: Array<ProductViewModel> = new Array<ProductViewModel>();
-        await products.forEach((item, i) => {
+        let productsViewModel: ProductViewModel[] = [];
+        await products.forEach((item) => {
             productsViewModel.push(item.asViewModel());
         });
         return productsViewModel;

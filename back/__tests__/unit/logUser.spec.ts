@@ -3,7 +3,7 @@ import {LogUserBusiness} from "../../src/app/business/logUserBusiness";
 
 describe("Create Log User", function () {
     it("should not create a log user with blank operation.", async function () {
-        let logUserDTO = LogUserFactory.init(0).setOperation("").build();
+        let logUserDTO = LogUserFactory.init(1).setOperation("").build();
         expect.assertions(1);
         try {
             await (new LogUserBusiness()).create(logUserDTO);
@@ -13,7 +13,7 @@ describe("Create Log User", function () {
     });
 
     it("should not create a log user with null operation.", async function () {
-        let logUserDTO = LogUserFactory.init(0).setOperation(null).build();
+        let logUserDTO = LogUserFactory.init(1).setOperation(null).build();
         expect.assertions(1);
         try {
             await (new LogUserBusiness()).create(logUserDTO);
@@ -23,7 +23,7 @@ describe("Create Log User", function () {
     });
 
     it("should not create a log user with blank message.", async function () {
-        let logUserDTO = LogUserFactory.init(0).setMessage("").build();
+        let logUserDTO = LogUserFactory.init(1).setMessage("").build();
         expect.assertions(1);
         try {
             await (new LogUserBusiness()).create(logUserDTO);
@@ -33,7 +33,7 @@ describe("Create Log User", function () {
     });
 
     it("should not create a log user with null description.", async function () {
-        let logUserDTO = LogUserFactory.init(0).setMessage(null).build();
+        let logUserDTO = LogUserFactory.init(1).setMessage(null).build();
         expect.assertions(1);
         try {
             await (new LogUserBusiness()).create(logUserDTO);

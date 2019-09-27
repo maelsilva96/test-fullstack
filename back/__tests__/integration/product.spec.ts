@@ -27,11 +27,15 @@ describe("List Product", function () {
     });
 
     it("should return all products by Controller", async function () {
-        await ProductFactory.createNewInstance();
+        let product = await ProductFactory.createNewInstance();
         let response = await request(app)
             .get("/product/list");
         expect(response.statusCode).toBe(200);
         expect(response.body).toHaveProperty("products");
+        expect(response.body.products[0].name).toBe(product.name);
+        expect(response.body.products[0].description).toBe(product.description);
+        expect(response.body.products[0].image).toBe(product.image);
+        expect(response.body.products[0].evaluation).toBe(product.evaluation);
     });
 });
 

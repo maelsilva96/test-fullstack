@@ -23,14 +23,9 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
     try {
-      await queryInterface.remove(
+      await queryInterface.removeColumn(
           'log_user',
-          'message',
-          {
-            type: Sequelize.STRING,
-            allowNull: false
-          },
-          { transaction }
+          'message'
       );
       await transaction.commit();
     } catch (err) {

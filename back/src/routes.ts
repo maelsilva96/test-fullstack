@@ -1,5 +1,6 @@
 import {Router} from 'express';
 import * as express from 'express';
+import * as cors from 'cors';
 import uploads from "./config/upload";
 import auth from "./app/middleware/auth";
 import authController from "./app/controllers/authController";
@@ -8,6 +9,7 @@ import logUserController from "./app/controllers/logUserController";
 import imageController from "./app/controllers/imageController";
 
 const route = Router();
+route.use(cors());
 
 route.post("/auth", authController.login);
 route.post("/createAndAuth", authController.createAndAuth);

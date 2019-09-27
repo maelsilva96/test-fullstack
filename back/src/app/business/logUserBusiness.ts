@@ -5,6 +5,7 @@ import {LogUserViewModel} from "../models/viewModel/logUserViewModel";
 
 export class LogUserBusiness {
     public async create(logUserDTO: LogUserDTO): Promise<LogUserViewModel> {
+        if (!logUserDTO.userId || logUserDTO.userId == 0) throw new ArgumentException("Usuário não encontrado!");
         if (!logUserDTO.operation || logUserDTO.operation == "") throw new ArgumentException("Operação obrigatória!");
         if (!logUserDTO.message || logUserDTO.message == "") throw new ArgumentException("Mensagem obrigatória!");
 
