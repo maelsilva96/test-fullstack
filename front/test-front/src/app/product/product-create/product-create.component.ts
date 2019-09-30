@@ -14,6 +14,7 @@ export class ProductCreateComponent implements OnInit {
   evaluation = 1;
   messageError = '';
   imageUrl = 'assets/image.svg';
+  public buttonDisabled = false;
   private imageSaveUrl: string;
   private readonly typeImagesValid = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
 
@@ -39,11 +40,14 @@ export class ProductCreateComponent implements OnInit {
     if (event.target.files && event.target.files[0]) {
       const photo = event.target.files[0];
       if (this.imageValid(photo)) {
+        this.buttonDisabled = true;
         const formData = new FormData();
         formData.append('image', photo);
         this.productService.sendImage(formData).subscribe((item) => {
+          this.buttonDisabled = false;
           this.setImage(item.headers.get('image'));
         }, (error) => {
+          this.buttonDisabled = false;
           this.messageError = error.error.message;
         });
       } else {

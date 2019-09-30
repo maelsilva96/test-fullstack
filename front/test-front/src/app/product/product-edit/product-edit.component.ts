@@ -14,6 +14,7 @@ export class ProductEditComponent implements OnInit {
   public evaluation = 1;
   public messageError = '';
   public messageSuccess = '';
+  public buttonDisabled = false;
   private readonly typeImagesValid = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
   public readonly faArrowLeft = faArrowLeft;
   private readonly id: number;
@@ -35,15 +36,18 @@ export class ProductEditComponent implements OnInit {
   onSubmit() {
     if (this.formValid(this.product)) {
       this.messageError = '';
+      this.buttonDisabled = true;
       this.productService.update(
         this.product.id, this.product.name, this.product.description,
         this.product.image, this.product.evaluation
       ).subscribe(() => {
         this.messageError = '';
         this.messageSuccess = 'Salvo com sucesso!';
+        this.buttonDisabled = false;
         this.notification.pushNotificationBlank();
       }, (error) => {
         this.messageSuccess = '';
+        this.buttonDisabled = false;
         this.messageError = error.error.message;
       });
     }
@@ -54,11 +58,14 @@ export class ProductEditComponent implements OnInit {
       const photo = event.target.files[0];
       if (this.imageValid(photo)) {
         const formData = new FormData();
+        this.buttonDisabled = true;
         formData.append('image', photo);
         this.productService.sendImage(formData).subscribe((item) => {
+          this.buttonDisabled = false;
           this.setImage(item.headers.get('image'));
           this.messageError = '';
         }, (error) => {
+          this.buttonDisabled = false;
           this.messageSuccess = '';
           this.messageError = error.error.message;
         });
