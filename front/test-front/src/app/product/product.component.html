@@ -1,5 +1,10 @@
 <div class="col-12">
   <div class="row">
+    <div class="col-12" *ngIf="userLogged()">
+      <a routerLink="/produto/novo">
+        <button class="btn btn-outline-primary">Novo produto</button>
+      </a>
+    </div>
     <div class="col-12">
       <h2 class="bd-title" id="content">Todos os produtos</h2>
     </div>
@@ -9,8 +14,8 @@
         <tr>
           <td>#</td>
           <td>Nome</td>
-          <td>description</td>
-          <td>Opções</td>
+          <td>Descrição</td>
+          <td *ngIf="userLogged()">Opções</td>
         </tr>
         </thead>
         <tbody>
@@ -18,7 +23,23 @@
           <td>{{item.id}}</td>
           <td>{{item.name}}</td>
           <td>{{item.description}}</td>
-          <td></td>
+          <td *ngIf="userLogged()">
+            <a [routerLink]="'/produto/visualizar/' + item.id">
+              <button class="btn btn-info">
+                <fa-icon [icon]="faEye"></fa-icon>
+              </button>
+            </a>&nbsp;
+            <a [routerLink]="'/produto/editar/' + item.id">
+              <button class="btn btn-warning">
+                <fa-icon [icon]="faEdit"></fa-icon>
+              </button>
+            </a>&nbsp;
+            <a (click)="ngClick(item.id)">
+              <button class="btn btn-danger">
+                <fa-icon [icon]="faTrash"></fa-icon>
+              </button>
+            </a>
+          </td>
         </tr>
         </tbody>
       </table>

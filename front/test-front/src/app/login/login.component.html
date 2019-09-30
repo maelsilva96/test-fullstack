@@ -4,15 +4,13 @@
       <div class="col-12 text-center">
         <h4>Entrar</h4>
       </div>
-      <div class="col-12" *ngIf="messageError">
-        <div class="alert alert-danger" role="alert">
-          {{messageError}}
-        </div>
+      <div class="col-md-12" *ngIf="messageError != ''">
+        <div class="alert alert-danger" role="alert">{{messageError}}</div>
       </div>
       <div class="form-group">
         <label for="emailLogin">E-mail</label>
         <input type="email" class="form-control" id="emailLogin" name="email"
-               ngModel aria-describedby="emailHelp" required placeholder="Endereço de e-mail">
+               ngModel required placeholder="Endereço de e-mail">
       </div>
       <div class="form-group">
         <label for="passwordLogin">Senha</label>
@@ -20,7 +18,7 @@
                ngModel placeholder="Senha" required>
       </div>
       <div class="col-12 text-center">
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" [disabled]="buttonDisabled" class="btn btn-primary">Entrar</button>
       </div>
       <div class="col-12 text-center">
         <a routerLink="/cadastrar">Não tenho cadastro</a>

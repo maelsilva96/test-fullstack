@@ -1,1 +1,39 @@
-<p>register works!</p>
+<div class="container">
+  <div class="justify-content-md-center row">
+    <form class="col-md-4 col-xs-12 col-lg-4 " #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="col-12 text-center">
+        <h4>Registrar</h4>
+      </div>
+      <div class="col-md-12" *ngIf="messageError != ''">
+        <div class="alert alert-danger" role="alert">{{messageError}}</div>
+      </div>
+      <div class="col-md-12" >
+        <div class="alert alert-success text-center" *ngIf="success" role="alert">
+          Usuário criado com sucesso! <br>
+          <a routerLink="/entrar">Clique aqui para entrar.</a>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="nameRegister">Nome</label>
+        <input type="name" class="form-control" id="nameRegister" name="name"
+               ngModel required placeholder="Nome">
+      </div>
+      <div class="form-group">
+        <label for="emailRegister">E-mail</label>
+        <input type="email" class="form-control" id="emailRegister" name="email"
+               ngModel required placeholder="Endereço de e-mail">
+      </div>
+      <div class="form-group">
+        <label for="passwordLogin">Senha</label>
+        <input type="password" class="form-control" id="passwordLogin" name="password"
+               ngModel placeholder="Senha" required>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" [disabled]="buttonDisabled" class="btn btn-primary">Cadastrar</button>
+      </div>
+      <div class="col-12 text-center">
+        <a routerLink="/entrar">Já tenho cadastro</a>
+      </div>
+    </form>
+  </div>
+</div>

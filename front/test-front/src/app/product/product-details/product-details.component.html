@@ -1,1 +1,27 @@
-<p>product-details works!</p>
+<div class="container">
+  <div class="justify-content-md-center row">
+    <div class="col-12 text-left">
+      <a href="">
+        <fa-icon [icon]="faArrowLeft"></fa-icon>&nbsp;
+        Voltar
+      </a>
+    </div>
+    <div class="col-md-8 col-sm-10 col-xs-12 col-lg-6">
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <img [src]="product.image"
+                 alt="Foto de capa" class="img-cover"/>
+          </div>
+        </div>
+        <div class="col-12">
+          <h2>{{product.name}}</h2>
+        </div>
+        <div class="col-12">
+          <fa-icon [icon]="faStar" *ngFor="let item of stars" class="text-warning"></fa-icon>
+        </div>
+        <div class="col-md-12 margin-top-bottom-10 text-justify">{{product.description}}</div>
+      </div>
+    </div>
+  </div>
+</div>

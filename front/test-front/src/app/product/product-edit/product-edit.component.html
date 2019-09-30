@@ -1,1 +1,54 @@
-<p>product-edit works!</p>
+<div class="container">
+  <div class="justify-content-md-center row">
+    <div class="col-12 text-left">
+      <a href="">
+        <fa-icon [icon]="faArrowLeft"></fa-icon>&nbsp;
+        Voltar
+      </a>
+    </div>
+    <form class="col-md-8 col-sm-10 col-xs-12 col-lg-6" #f="ngForm" (ngSubmit)="onSubmit()">
+      <div class="col-12 text-center">
+        <h4>Editar produto</h4>
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+          <img [src]="product.image"
+               alt="Foto de capa" class="img-cover"/>
+        </div>
+      </div>
+      <div class="col-md-12" *ngIf="messageError != ''">
+        <div class="alert alert-danger" role="alert">{{messageError}}</div>
+      </div>
+      <div class="col-md-12" *ngIf="messageSuccess != ''">
+        <div class="alert alert-success" role="alert">{{messageSuccess}}</div>
+      </div>
+      <div class="form-group">
+        <label for="nameProduct">Nome</label>
+        <input type="text" class="form-control" [(ngModel)]="product.name" name="name" id="nameProduct" required placeholder="Nome">
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <label for="image">Foto do produto</label>
+        </div>
+        <div class="col-12">
+          <input type="file" id="image" name="image" (change)="onSaveImage($event)" lang="ptBr">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="descriptionProduct">Descrição do produto</label>
+        <textarea name="descriptionProduct" id="descriptionProduct" class="form-control" rows="5">{{product.description}}</textarea>
+      </div>
+      <div class="form-group row">
+        <div class="col-12">
+          <label for="evaluationProduct">Avaliação</label>
+        </div>
+        <div class="col-12">
+          <ngb-rating [(rate)]="product.evaluation" id="evaluationProduct" max="5"></ngb-rating>
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>

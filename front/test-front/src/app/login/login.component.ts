@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {AuthService} from '../auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +10,10 @@ import {NgForm} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  public messageError: string;
+  public messageError = '';
+  public buttonDisabled = false;
 
-  constructor() {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
@@ -18,12 +21,26 @@ export class LoginComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     const {value} = form;
-    if (!value.email || !/\S+@\S+\.\S+/.test(value.email)) {
-      this.messageError = 'E-mail inválido!';
-    } else if (!value.password) {
-      this.messageError = 'Senha inválida!';
-    } else {
-      this.messageError = '';
+    if (this.formValid(value)) {
+      this.buttonDisabled = true;
+      this.authService.authUser(value.email, value.password).then(() => {
+        this.buttonDisabled = false;
+        this.router.navigateByUrl('/');
+      }).catch((error) => {
+        this.buttonDisabled = false;
+        this.messageError = error;
+      });
     }
+  }
+
+  private formValid(value): boolean {
+    if (!/\S+@\S+\.\S+/.test(value.email)) {
+      this.messageError = 'E-mail inválido!';
+      return false;
+    } else if (value.password === '' || value.password === undefined) {
+      this.messageError = 'Senha inválido!';
+      return false;
+    }
+    return true;
   }
 }

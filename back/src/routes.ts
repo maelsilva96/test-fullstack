@@ -9,7 +9,13 @@ import logUserController from "./app/controllers/logUserController";
 import imageController from "./app/controllers/imageController";
 
 const route = Router();
-route.use(cors());
+route.use(cors({
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "exposedHeaders": ["token", "id", "image", "Content-Type", "Content-Lengths"],
+    "optionsSuccessStatus": 204
+}));
 
 route.post("/auth", authController.login);
 route.post("/createAndAuth", authController.createAndAuth);

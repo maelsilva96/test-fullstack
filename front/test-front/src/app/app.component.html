@@ -1,17 +1,29 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-primary">
-  <a class="navbar-brand" routerLink="/">Test Front</a>
-  <button class="navbar-toggler hidden-sm-up" type="button" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">TestFront</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/">Início</a>
       </li>
-      <li class="nav-item" routerLinkActive="active">
+      <li class="nav-item" routerLinkActive="active" *ngIf="!userLogged()">
         <a class="nav-link" routerLink="/entrar">Entrar</a>
       </li>
+      <li class="nav-item" *ngIf="userLogged()">
+        <a class="btn btn-warning" (click)="logout()">Sair</a>
+      </li>
     </ul>
+    <div class="my-2 my-lg-0" *ngIf="userLogged()">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/noticacoes">
+            Notificações <span class="badge badge-light">{{getCountNotifications()}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 

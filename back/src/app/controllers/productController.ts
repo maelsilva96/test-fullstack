@@ -35,6 +35,7 @@ export class ProductController {
                 parseInt(req.body.user_id), "Criar",
                 `Usuário criou o produto ${product.name}.`
             ));
+            res.setHeader('id', product.id);
             return res.status(201).json();
         } catch (e) {
             return res.status(400).json({message: e.message});
